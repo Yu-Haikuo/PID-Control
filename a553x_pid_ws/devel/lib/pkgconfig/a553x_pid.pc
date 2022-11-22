@@ -1,0 +1,8 @@
+prefix=/home/mallab/a553x_pid_ws/devel
+
+Name: a553x_pid
+Description: Description of a553x_pid
+Version: 0.0.0
+Cflags: -I/home/mallab/a553x_pid_ws/src/a553x_pid/include
+Libs: -L${prefix}/lib 
+Requires: roscpp sensor_msgs nav_msgs geometry_msgs gazebo_msgs std_msgs

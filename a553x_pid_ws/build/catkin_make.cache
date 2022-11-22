@@ -1,0 +1,2 @@
+a553x_pid
+-DCATKIN_DEVEL_PREFIX=/home/mallab/a553x_pid_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mallab/a553x_pid_ws/install -G Unix Makefiles

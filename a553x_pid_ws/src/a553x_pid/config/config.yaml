@@ -1,0 +1,19 @@
+# EE3305/ME3243
+# Name: Yu Haikuo
+# Matric number: A0194553X
+
+# Those variables are pre-determined. 
+
+dt: 0.1
+target_angle: 0
+pillar_x: 12.5
+pillar_y: 12.5
+
+# Those variables are to be determined. 
+target_distance: 1.3
+Kp_f: 2.8
+Ki_f: 0
+Kd_f: 0
+Kp_a: 4.5
+Ki_a: 0
+Kd_a: 0
