@@ -36,3 +36,9 @@ It can be seen that after tuning, the angular error of the husky robot reaches z
 <br/>
 
 It is clear to see that the forward error continues to drop since the beginning, and finally reaches zero at 20th second, without overshooting. That means, the husky robot starts moving directly towards the target since the beginning, and finally arrives and stops at predetermined distance we desire at 20th second.
+
+## Conclusions and Key Learning Points
+
+In conclusion, the husky robot is able to find and maintain at the correct pillar direction in `5` seconds, and stop at predetermined distance in less than `20` seconds with its PID Control Algorithm, and only Proportional Control is involved in this process.
+
+The key learning points include the project building in `Ubuntu` and `ROS`, the initialization of variables, the implementation of control signal (`trans_angle_` and `trans_forward_`), and the tuning process together with the analysis of PID Control Performance.
