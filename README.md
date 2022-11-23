@@ -11,7 +11,7 @@ The husky robot is starting from origin `(0, 0)`, and the pillar is placing at p
 
 ## Design of PID Control
 
-The PID Control Algorithm is implemented in `BotControl::pidAlgorithm()` in BotControl.cpp. First, the algorithm calculates `Dx` and `Dy` as the `x` and `y` distance of husky robot to the pillar. Then, it saves the current forward and angular error as `error_forward_prev` and `error_angle_prev`. After that, it calculates and updates forward and angular error, regularizes the error angle within `[-p, p]`, obtains corresponding integral and derivative items with previously saved forward and angular error, and finally gets the control signal – `trans_angle_` and `trans_forward_`, and publishes all results. In my design of PID Control Algorithm, **only Proportional Control (P Control) is involved.**
+The PID Control Algorithm is implemented in `BotControl::pidAlgorithm()` in `BotControl.cpp`. First, the algorithm calculates `Dx` and `Dy` as the `x` and `y` distance of husky robot to the pillar. Then, it saves the current forward and angular error as `error_forward_prev` and `error_angle_prev`. After that, it calculates and updates forward and angular error, regularizes the error angle within `[-p, p]`, obtains corresponding integral and derivative items with previously saved forward and angular error, and finally gets the control signal – `trans_angle_` and `trans_forward_`, and publishes all results. In my design of PID Control Algorithm, **only Proportional Control (P Control) is involved.**
 
 ## Result
 
