@@ -19,6 +19,24 @@ The PID Control Algorithm is implemented in `BotControl::pidAlgorithm()` in `Bot
     <img height="450" width="800" src="https://github.com/Yu-Haikuo/Robotics-ROS-PID-Control/blob/main/Figures/ezgif.com-gif-maker.gif">
 </p>
 
+## Tuning
+
+### Objective of tuning
+
+My objective of tunning is mainly to **minimise the forward & angular error when reaching the target, and then trying to reduce the time needed to reach the target on the basis of achieving minimized error**. My strategy of tunning is to tune angular error related parameters first in order to achieve minimized angular error and shortest time to find the correct direction. After that, tunning forward error related parameters in order to achieve minimized forward error and then trying to reduce time needed to reach the target.
+
+### Angular Error
+
+Based on several trials I found that setting `Ki_a` and `Kd_a` to `0` and only assigning value to `Kp_a` could help maintain zero angular error. Then I increased `Kp_a` from `1` to `7` by `1` each time, and I observed that if `Kp_a` is set too low, then it may not reach zero angular error, although it can maintain very well and the error line plotted in the figure is quite stable; if `Kp_a` is set too high, then it can reach zero angular error quickly but it is quite difficult to maintain there quietly. Instead, the error line plotted in the figure oscillates severely around zero error horizontal line. After several trials, I finally found the most appropriate value – `4.5` for `Kp_a`.
+
+Thus, in the final angular error feedback-control program, **only Proportional Control is involved**. That means, the control signal is only proportional to the error. It is the most effective method comparing with adding I control and D control under the current circumstances.
+
+### Forward Error
+
+After tunning angular error related parameters and obtained minimized angular error, I started tunning forward error related parameters. Same as how I did previously, after several trials, I also found that setting `Ki_f` and `Kd_f` to `0` and only assigning values to `Kp_f` could help maintain zero forward error. Then I increased `Kp_f` from `1` to `4` by `1` each time, and I also observed similar phenomenon – if `Kp_f` is set too low, then it took longer time to reach zero forward error, which appears as a long arc on the picture; if `Kp_f` is set too high, then it can reach zero forward error quickly but it is quite difficult to maintain there quietly. Instead, the error line plotted in the figure oscillates severely around zero error horizontal line. After several trials, I finally found the most appropriate value – `2.8` for `Kp_a`.
+
+Therefore, in the final forward error feedback-control program, **only Proportional Control is involved**. That means, the control signal is only proportional to the error. It is also the most effective method comparing with adding I control and D control under the current circumstances.
+
 ## Performance
 
 ![error_angle.png](https://github.com/Yu-Haikuo/Robotics-ROS-PID-Control/blob/main/Figures/error_angle.png)
