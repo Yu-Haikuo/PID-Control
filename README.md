@@ -23,7 +23,7 @@ The PID Control Algorithm is implemented in `BotControl::pidAlgorithm()` in `Bot
 
 ### Objective of tuning
 
-My objective of tunning is mainly to **minimise the forward & angular error when reaching the target, and then trying to reduce the time needed to reach the target on the basis of achieving minimized error**. My strategy of tunning is to tune angular error related parameters first in order to achieve minimized angular error and shortest time to find the correct direction. After that, tunning forward error related parameters in order to achieve minimized forward error and then trying to reduce time needed to reach the target.
+My objective of tuning is mainly to **minimise the forward & angular error when reaching the target, and then trying to reduce the time needed to reach the target on the basis of achieving minimized error**. My strategy of tunning is to tune angular error related parameters first in order to achieve minimized angular error and shortest time to find the correct direction. After that, tunning forward error related parameters in order to achieve minimized forward error and then trying to reduce time needed to reach the target.
 
 ### Angular Error
 
