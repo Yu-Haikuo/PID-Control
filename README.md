@@ -1,6 +1,6 @@
 # ROS PID Control
 
-## Summary of Project
+## Summary
 
 In this PID Control Project, we are going to use ROS to design a PID feedback-control program which simulates a husky robot going automatically to the pillar and stopping at the desired distance we want, while trying to minimize angular & forward error and time needed to get to the pillar.
 
