@@ -59,4 +59,4 @@ It is clear to see that the forward error continues to drop since the beginning,
 
 In conclusion, the husky robot is able to find and maintain at the correct pillar direction in `5` seconds, and stop at predetermined distance in less than `20` seconds with its PID Control Algorithm, and only Proportional Control is involved in this process.
 
-The key learning points include the project building in `Ubuntu` and `ROS`, the initialization of variables, the implementation of control signal (`trans_angle_` and `trans_forward_`), and the tuning process together with the analysis of PID Control Performance.
+The key learning points include the project building in `Ubuntu` and `ROS`, the initialization of variables, the implementation of control signals (`trans_angle_` and `trans_forward_`), and the tuning process together with the analysis of PID Control Performance.
